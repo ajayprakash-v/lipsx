@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="aos.css">
+	<script src="gsap.js"></script>
+	<script src="scrolltrigger.js"></script>
+	<script src="aos.js"></script>
+	<script src="jquery.js"></script>
+	<link rel="stylesheet"  href="about.css">
+</head>
+<body>
+	<div id="menuslider">
+		<div id="menutext">
+		<a href="about.html" class="d-flex w-100 justify-content-center " id="about">
+				<span>A</span>
+				<span>B</span>
+				<span>O</span>
+				<span>U</span>
+				<span>T</span>
+			</a>
+		<a href="" class="d-flex w-100 justify-content-center" id="shades">
+				<span>S</span>
+				<span>H</span>
+				<span>A</span>
+				<span>D</span>
+				<span>E</span>
+				<span>S</span>
+			</a>
+		<a href="" class="d-flex w-100 justify-content-center" id="contact">
+				<span>C</span>
+				<span>O</span>
+				<span>N</span>
+				<span>T</span>
+				<span>A</span>
+				<span>C</span>
+				<span>T</span>
+			</a>
+		</div>
+	</div>
+	<nav class="d-flex w-100 position-fixed top-0 ">
+		<div class="d-flex justify-content-between container">
+			<a href="index.html">LIPX</a>
+			<img src="images/menu.png" id="menu">
+		</div>
+	</nav>
+
+	<section id="sec1">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col d-flex justify-content-center">
+					<img src="images/la.jpg" id="la" data-aos="fade-up" data-aos-duration='1000'>
+				</div>
+				<div class="col" data-aos="fade-up" data-aos-duration='1500'>
+					<h1 id="t2">NYX Professional Makeup is an American cosmetics company that is a subsidiary of L'Oréal. The company was founded in Los Angeles by Toni Ko in 1999. </h1>
+				</div>
+			</div>
+			<h1>NYS</h1>
+			<p> It was named after Nyx, the Greek goddess of the night. NYX Professional Makeup is "certified" and acknowledged by PETA as a cruelty-free brand, and they offer a wide range of vegan-friendly products. NYX products are sold in over 70 countries at thousands of retailers, ranging from specialty beauty and fashion stores to freestanding shops and the brand's corporate website.</p>
+			<div class="d-flex justify-content-center position-relative text1">
+				<img src="images/1.jpg" id="img1">
+				<h1 id="t2"> NYX launched the Freedom and Artistry for Creative Expression (FACE) awards competition.</h1>
+				<p>NYX Cosmetics continues under other management as a part of L'Oréal, and now provides products including lipstick, lip gloss, and mineral foundation.[6] In September 2015</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+			<h1>Proud artistry for all <br> with love from los &hearts; <b>angels</b></h1>
+		<div class="d-flex justify-content-between position-absolute bottom-0 w-100">
+			<div class="d-flex">
+				<a href="">ABOUT</a>
+				<a href="">SHADES</a>
+				<a href="">CONTACT</a>
+			</div>
+			<div>
+				<span>@2023 myprojects</span>
+			</div>
+		</div>
+	</footer>
+
+<script>
+	AOS.init()
+	$('#menu').click(function(){
+		if ($('#menu').hasClass('menu')) {
+			$('#menu').removeClass('menu')	
+		}
+		else{
+			$('#menu').addClass('menu')
+		}
+
+		$('#menuslider').slideToggle()
+	})
+	$('#about span').mouseover(function(){
+		$('#about span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#about span').mouseleave(function(){
+		$('#about span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+	$('#contact span').mouseover(function(){
+		$('#contact span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#contact span').mouseleave(function(){
+		$('#contact span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+	$('#shades span').mouseover(function(){
+		$('#shades span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#shades span').mouseleave(function(){
+		$('#shades span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+
+	gsap.to('#la',{
+			y:-100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec1',
+				start:'top 0%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#t2',{
+			y:-100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec1',
+				start:'top 0%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+</script>
+</body>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="aos.css">
+	<script src="gsap.js"></script>
+	<script src="scrolltrigger.js"></script>
+	<script src="aos.js"></script>
+	<script src="jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="shades.css">
+</head>
+<body>
+	<div id="menuslider">
+		<div id="menutext">
+		<a href="about.html" class="d-flex w-100 justify-content-center " id="about">
+				<span>A</span>
+				<span>B</span>
+				<span>O</span>
+				<span>U</span>
+				<span>T</span>
+			</a>
+		<a href="" class="d-flex w-100 justify-content-center" id="shades">
+				<span>S</span>
+				<span>H</span>
+				<span>A</span>
+				<span>D</span>
+				<span>E</span>
+				<span>S</span>
+			</a>
+		<a href="contact.html" class="d-flex w-100 justify-content-center" id="contact">
+				<span>C</span>
+				<span>O</span>
+				<span>N</span>
+				<span>T</span>
+				<span>A</span>
+				<span>C</span>
+				<span>T</span>
+			</a>
+		</div>
+	</div>
+	<nav class="d-flex w-100 position-fixed top-0 ">
+		<div class="d-flex justify-content-between container">
+			<a href="index.html">LIPX</a>
+			<img src="images/menu.png" id="menu">
+		</div>
+	</nav>
+	<section id="sec1">
+		<h1>Shop lipstick</h1>
+		<h1>6 new Spicy shades</h1>
+	</section>
+	<section id="sec2">
+		<img src="images/p1-min.jpg" id="img1">
+		<div id="sec2p1">
+			<h1>Available in vibrant shades</h1>
+			<p>Smooth formula applies like a liquid lipstick and hugs like a cream lipstick<br>Feels comfortable all day</p>
+		</div>
+	</section>
+	<section id="sec3">
+		<img src="images/p2-min.jpg" id="img2">
+		<div id="sec3p1">
+			<h1>Red vibrant shades</h1>
+			<p>Whip it real good with full coverage, vibrant color <br>comfortable all day wear in 24 lip smacking smooth matte shades.</p>
+		</div>
+	</section>
+	<section id="sec4">
+		<img src="images/p3-min.jpg" id="img3">
+		<div id="sec4p1">
+			<h1>Red vibrant shades</h1>
+			<p>Whip it real good with full coverage, vibrant color <br>comfortable all day wear in 24 lip smacking smooth matte shades.</p>
+		</div>
+	</section>
+	<section id="sec5">
+		<h1>Review</h1>
+		<div class="d-flex justify-content-around">
+			<span>Goes on so super smooth! The color is amazing...</span>
+			<span> We don't have them in the USA. I'm a fan.</span>
+		</div>
+		<div class="d-flex justify-content-around">
+			<span>Hi there. We’re sorry to hear the Smooth Whip Matte Lip Cream didn’t perform as well as expected. </span>
+			<span>We recommend Lip Lingerie XXL Matte Liquid Lipstick for its no crack, no transfer, no fade formula</span>
+			<span>We hope you will continue to try our products with greater success in the future!</span>
+			<span> We don't have them in the USA. I'm a fan.</span>
+		</div>
+		<div class="d-flex justify-content-around">
+			<span>This is the best matte lip color I’ve ever used. My lips didn’t feel try. It didn’t look crumbly. The color lasted all day.</span>
+			<span> We don't have them in the USA. I'm a fan.</span>
+			<span> feels good on the lips, not too drying and not too heavy :)</span>
+		</div>
+	</section>
+	<footer>
+			<h1>Proud artistry for all <br> with love from los &hearts; <b>angels</b></h1>
+		<div class="d-flex justify-content-between position-absolute bottom-0 w-100">
+			<div class="d-flex">
+				<a href="">ABOUT</a>
+				<a href="">SHADES</a>
+				<a href="">CONTACT</a>
+			</div>
+			<div>
+				<span>@2023 myprojects</span>
+			</div>
+		</div>
+	</footer>
+<script>
+	AOS.init()
+	$('#menu').click(function(){
+		if ($('#menu').hasClass('menu')) {
+			$('#menu').removeClass('menu')	
+		}
+		else{
+			$('#menu').addClass('menu')
+		}
+
+		$('#menuslider').slideToggle()
+	})
+	$('#about span').mouseover(function(){
+		$('#about span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#about span').mouseleave(function(){
+		$('#about span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+	$('#contact span').mouseover(function(){
+		$('#contact span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#contact span').mouseleave(function(){
+		$('#contact span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+	$('#shades span').mouseover(function(){
+		$('#shades span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#shades span').mouseleave(function(){
+		$('#shades span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+	gsap.to('#img1',{
+			y:200,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec2',
+				start:'top 50%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#img2',{
+			y:200,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec3',
+				start:'top 50%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#img3',{
+			y:200,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec4',
+				start:'top 50%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+</script>
+</body>

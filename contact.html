@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="aos.css">
+	<script src="gsap.js"></script>
+	<script src="scrolltrigger.js"></script>
+	<script src="aos.js"></script>
+	<script src="jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+<body>
+<div id="menuslider">
+		<div id="menutext">
+		<a href="about.html" class="d-flex w-100 justify-content-center " id="about">
+				<span>A</span>
+				<span>B</span>
+				<span>O</span>
+				<span>U</span>
+				<span>T</span>
+			</a>
+		<a href="" class="d-flex w-100 justify-content-center" id="shades">
+				<span>S</span>
+				<span>H</span>
+				<span>A</span>
+				<span>D</span>
+				<span>E</span>
+				<span>S</span>
+			</a>
+		<a href="contact.html" class="d-flex w-100 justify-content-center" id="contact">
+				<span>C</span>
+				<span>O</span>
+				<span>N</span>
+				<span>T</span>
+				<span>A</span>
+				<span>C</span>
+				<span>T</span>
+			</a>
+		</div>
+	</div>
+	<nav class="d-flex w-100 position-fixed top-0 ">
+		<div class="d-flex justify-content-between container">
+			<a href="index.html">LIPX</a>
+			<img src="images/menu.png" id="menu">
+		</div>
+	</nav>
+	<div id="sec1" class="container">
+		<h1>Contact us</h1>
+		<p>For U.S. consumers only <br><br>Click here for our FAQ. If you can't find the answer you're looking for, we are ready to help! Please contact us using the form below or call us at 1(844) 335-3510.</p>
+		<h5>HOURS OF OPERATIONS</h5>
+		<br>
+		<h6>Phone and Email:</h6>
+		<p>9AM-8PM EST <br>6AM-5PM PST</p>
+		<h6>Live Chat:</h6>
+		<p>10AM-8PM EST <br> 7AM-5PM PST</p>
+		<p>On Christmas Eve and New Year's Eve, our call center is open from 6am to 2:30pm PST. We are closed on all major holidays and weekends.</p>
+	</div>
+	<script>
+		AOS.init()
+	$('#menu').click(function(){
+		if ($('#menu').hasClass('menu')) {
+			$('#menu').removeClass('menu')	
+		}
+		else{
+			$('#menu').addClass('menu')
+		}
+
+		$('#menuslider').slideToggle()
+	})
+	$('#about span').mouseover(function(){
+		$('#about span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#about span').mouseleave(function(){
+		$('#about span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+	$('#contact span').mouseover(function(){
+		$('#contact span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#contact span').mouseleave(function(){
+		$('#contact span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+	$('#shades span').mouseover(function(){
+		$('#shades span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#shades span').mouseleave(function(){
+		$('#shades span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+	</script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="aos.css">
+	<script src="gsap.js"></script>
+	<script src="scrolltrigger.js"></script>
+	<script src="aos.js"></script>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<div id="menuslider">
+		<div id="menutext">
+		<a href="about.html" class="d-flex w-100 justify-content-center " id="about">
+				<span>A</span>
+				<span>B</span>
+				<span>O</span>
+				<span>U</span>
+				<span>T</span>
+			</a>
+		<a href="shades.html" class="d-flex w-100 justify-content-center" id="shades">
+				<span>S</span>
+				<span>H</span>
+				<span>A</span>
+				<span>D</span>
+				<span>E</span>
+				<span>S</span>
+			</a>
+		<a href="contact.html" class="d-flex w-100 justify-content-center" id="contact">
+				<span>C</span>
+				<span>O</span>
+				<span>N</span>
+				<span>T</span>
+				<span>A</span>
+				<span>C</span>
+				<span>T</span>
+			</a>
+		</div>
+	</div>
+	<nav class="d-flex w-100 position-fixed top-0 ">
+		<div class="d-flex justify-content-between container">
+			<a href="index.html">LIPX</a>
+			<img src="images/menu.png" id="menu">
+		</div>
+	</nav>
+	<section id="sec1" class="d-flex align-items-center">
+		<div id="s1text" class="container">
+			<h2 data-aos="fade" data-aos-duration='1000'>Lipx professitional <br> makeup</h2>
+			<h2 data-aos="fade-up" data-aos-duration='1500'>GET YOUR GAME FACE ON</h2>
+		</div>
+		<h1 data-aos="fade-up" data-aos-duration='2000' id="nys">NYS</h1>
+	</section>
+	<section id="sec2">
+		<div id="box1">
+			<p>IN PROUD PARTNERSHIP WITH THE LOS ANGELES LGBT </p>
+		</div>
+		<div id="p1">
+			<div id="p1img" class="d-flex justify-content-center w-100">
+				<img src="images/1.jpg" id="l1">
+				<img src="images/2.jpg" id="l2">
+			</div>
+			<h1>Introducing SmoothWhip Matte Lip Cream</h1>
+			<p>our first-ever vegan-formula lip smoothers. <br>Available in 24 bold shades, this creamy matte <br>liquid lipstick delivers vibrant color.</p>
+
+			<div id="p2">
+				<div id="p2img" class="d-flex justify-content-center w-100">
+					<img src="images/3.jpg" id="l3">
+					<img src="images/4.jpg" id="l4">
+				</div>
+				<h1>The result is all-day</h1>
+				<p>Apply the full-coverage formula onto bare lips <br>or pair it with a long-wear lip liner for creamy, comfortable color.</p>				
+
+				<div id="p3">
+					<div id="p3img" class="d-flex justify-content-center w-100">
+						<img src="images/5.jpg" id="l5">
+						<img src="images/6.jpg" id="l6">
+					</div>
+					<h1>Our vegan-formula matte liquid lipstick</h1>
+					<p>Whip it real good with full coverage, vibrant color,<br> comfortable all day wear in 24 lip smacking smooth matte shades.</p>
+
+					<div id="p4">
+						<div id="p4img" class="d-flex justify-content-center w-100">
+							<img src="images/7.jpg" id="l7">
+							<img src="images/8.jpg" id="l8">
+						</div>
+						<h1>Best matte lip ever</h1>
+						<p>This is the best matte lip color I’ve ever used. My lips didn’t feel try. It didn’t look crumbly. <br> The color lasted all day. I even accidentally put some chapstick <br>over it at one point and all was well. I ordered a bunch more lol.</p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="sec3" class="">
+		<h1 id="full">Full coverage pay of 98% consumer agree <br> soft  <br> texture feel 97% costumer feels </h1>
+		<img src="images/la.jpg" id="la">
+	</section>
+	<footer>
+			<h1>Proud artistry for all <br> with love from los &hearts; <b>angels</b></h1>
+		<div class="d-flex justify-content-between position-absolute bottom-0 w-100">
+			<div class="d-flex">
+				<a href="">ABOUT</a>
+				<a href="">SHADES</a>
+				<a href="">CONTACT</a>
+			</div>
+			<div>
+				<span>@2023 myprojects</span>
+			</div>
+		</div>
+	</footer>
+<script>
+	AOS.init()
+	gsap.registerPlugin('ScrollTrigger')
+	gsap.to('#s1text',{
+			y:-300,
+			duration:2,
+			scrollTrigger:{
+				trigger:'#sec1',
+				start:'top 0%',
+				end:'bottom 50%',
+				scrub:1
+			}
+		})
+	gsap.to('#nys',{
+			top:-300,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec1',
+				start:'top 0%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#l2',{
+			rotate:20,
+			y:-200,
+			x:100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#p1img',
+				start:'top 90%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#l1',{
+			rotate:-5,
+			y:-100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#p1img',
+				start:'top 90%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#l4',{
+			rotate:20,
+			y:-200,
+			x:100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#p2img',
+				start:'top 90%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#l3',{
+			rotate:-5,
+			y:-100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#p2img',
+				start:'top 90%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+
+	gsap.to('#l6',{
+			rotate:20,
+			y:-200,
+			x:100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#p3img',
+				start:'top 90%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#l5',{
+			rotate:-5,
+			y:-100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#p3img',
+				start:'top 90%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#l8',{
+			rotate:20,
+			y:-200,
+			x:100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#p4img',
+				start:'top 90%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#l7',{
+			rotate:-5,
+			y:-100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#p4img',
+				start:'top 90%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#full',{
+			y:-100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#full',
+				start:'top 90%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#la',{
+			x:200,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#la',
+				start:'top 90%',
+				end:'bottom 0%',
+				scrub:1, 
+			}
+		})
+	$('#menu').click(function(){
+		if ($('#menu').hasClass('menu')) {
+			$('#menu').removeClass('menu')	
+		}
+		else{
+			$('#menu').addClass('menu')
+		}
+
+		$('#menuslider').slideToggle()
+	})
+	$('#about span').mouseover(function(){
+		$('#about span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#about span').mouseleave(function(){
+		$('#about span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+	$('#contact span').mouseover(function(){
+		$('#contact span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#contact span').mouseleave(function(){
+		$('#contact span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+	$('#shades span').mouseover(function(){
+		$('#shades span').each(function(e,i){
+			console.log(e/2)
+			$(i).css({'rotate':`${e*5}deg`,'transition':'.5s'})
+		})
+	})
+	$('#shades span').mouseleave(function(){
+		$('#shades span').each(function(e,i){
+			$(i).css({'rotate':`0deg`,'transition':'1s'})
+		})
+	})
+</script>
+</body>
+</html>
