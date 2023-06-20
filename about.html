@@ -22,7 +22,7 @@
 				<span>U</span>
 				<span>T</span>
 			</a>
-		<a href="" class="d-flex w-100 justify-content-center" id="shades">
+		<a href="shades.html" class="d-flex w-100 justify-content-center" id="shades">
 				<span>S</span>
 				<span>H</span>
 				<span>A</span>
@@ -30,7 +30,7 @@
 				<span>E</span>
 				<span>S</span>
 			</a>
-		<a href="" class="d-flex w-100 justify-content-center" id="contact">
+		<a href="contact.html" class="d-flex w-100 justify-content-center" id="contact">
 				<span>C</span>
 				<span>O</span>
 				<span>N</span>
@@ -126,7 +126,30 @@
 			$(i).css({'rotate':`0deg`,'transition':'1s'})
 		})
 	})
-
+	const width=screen.width
+	if (width>320 && width<768) {
+		gsap.to('#la',{
+			y:-10,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec1',
+				start:'top 0%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#t2',{
+			y:-10,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec1',
+				start:'top 0%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	}
+		else{
 	gsap.to('#la',{
 			y:-100,
 			duration:3,
@@ -147,5 +170,6 @@
 				scrub:1,
 			}
 		})
+}
 </script>
 </body>

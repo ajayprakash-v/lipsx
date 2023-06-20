@@ -148,7 +148,41 @@
 			$(i).css({'rotate':`0deg`,'transition':'1s'})
 		})
 	})
-	gsap.to('#img1',{
+	const width=screen.width
+	if (width>320 && width<768) {
+		gsap.to('#img1',{
+			y:100,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec2p1',
+				start:'top 30%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#img2',{
+			y:200,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec3p1',
+				start:'top 30%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	gsap.to('#img3',{
+			y:200,
+			duration:3,
+			scrollTrigger:{
+				trigger:'#sec4p1',
+				start:'top 30%',
+				end:'bottom 0%',
+				scrub:1,
+			}
+		})
+	}
+	else{
+		gsap.to('#img1',{
 			y:200,
 			duration:3,
 			scrollTrigger:{
@@ -178,5 +212,6 @@
 				scrub:1,
 			}
 		})
+	}
 </script>
 </body>
